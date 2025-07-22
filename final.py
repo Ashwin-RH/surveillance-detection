@@ -6,6 +6,8 @@ import joblib
 import sys
 import random
 
+from huggingface_hub import hf_hub_download
+
 # Disable oneDNN custom operations
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
@@ -50,17 +52,21 @@ if uploaded_file is None:
     st.info("Please upload a video to begin analysis.")
 
 
-# 🔽 Model selection
+
+
+# 👇 Hugging Face model paths (cached after 1st download)
 model_paths = {
-    'Random forest': "D:/saved_ml_model/model2.joblib",
-    'XGBoost': "D:/saved_ml_model/model7.joblib",
-    'MLP Multilayer Perceptron': "D:/saved_ml_model/clf9.joblib",
-    'Extra tree classifier': "D:/saved_ml_model/clf10.joblib",
-    'LightGBM': "D:/saved_ml_model/model8.joblib",
-    'Convolution Neural Network': "D:/sic/saved_dl_model/cnn_model.joblib",
-    'Recurrent Neural Network': "D:/sic/saved_dl_model/rnn_model.joblib",
-    'Feedforward Neural Network': "D:/sic/saved_dl_model/fnn_model.joblib"
+    'Random forest': hf_hub_download(repo_id="Ashwinharagi/surveillance-randomforest", filename="model2.joblib"),
+    'XGBoost': hf_hub_download(repo_id="Ashwinharagi/surveillance-xgboost", filename="model7.joblib"),
+    'MLP Multilayer Perceptron': hf_hub_download(repo_id="Ashwinharagi/surveillance-mlp-multilayer-perceptron", filename="clf9.joblib"),
+    'LightGBM': hf_hub_download(repo_id="Ashwinharagi/surveillance-lightgbm", filename="model8.joblib"),
 }
+ 
+    # 'Extra tree classifier': "D:/saved_ml_model/clf10.joblib",
+    # 'Convolution Neural Network': "D:/sic/saved_dl_model/cnn_model.joblib",
+    # 'Recurrent Neural Network': "D:/sic/saved_dl_model/rnn_model.joblib",
+    # 'Feedforward Neural Network': "D:/sic/saved_dl_model/fnn_model.joblib"
+
 selected_model = st.selectbox("Choose Model:", list(model_paths.keys()))
 
 # 🧾 Class mapping
