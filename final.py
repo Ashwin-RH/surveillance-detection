@@ -58,7 +58,7 @@ if uploaded_file is None:
 model_paths = {
     'Random forest': hf_hub_download(repo_id="Ashwinharagi/surveillance-randomforest", filename="model2.joblib"),
     'XGBoost': hf_hub_download(repo_id="Ashwinharagi/surveillance-xgboost", filename="model7.joblib"),
-    'MLP Multilayer Perceptron': hf_hub_download(repo_id="Ashwinharagi/surveillance-mlp-multilayer-perceptron", filename="clf9.joblib"),
+    'MLP Multilayer Perceptron': hf_hub_download(repo_id="Ashwinharagi/surveillance-Multilayer-Perceptron-mlp", filename="clf9.joblib"),
     'LightGBM': hf_hub_download(repo_id="Ashwinharagi/surveillance-lightgbm", filename="model8.joblib"),
 }
  
