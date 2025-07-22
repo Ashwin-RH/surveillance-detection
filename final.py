@@ -22,18 +22,10 @@ except ImportError:
 st.set_page_config(page_title="Surveillance Detection")
 
 # 💅 Custom styling and header
-st.markdown("""
-    <style>
-        .main {
-            background-color: #f8fbff;
-        }
-        h1 {
-            font-family: 'Segoe UI', sans-serif;
-        }
-    </style>
-""", unsafe_allow_html=True)
 
-st.markdown("<h1 style='text-align: center; color: #1f77b4;'>Surveillance Detection</h1>", unsafe_allow_html=True)
+
+
+st.markdown("<h1 style='text-align: center;'>Surveillance Detection</h1>", unsafe_allow_html=True)
 st.markdown("**Upload a video file and choose a model to detect activities in the video.**")
 
 
