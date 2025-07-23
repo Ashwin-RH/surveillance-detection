@@ -6,3 +6,6 @@ port = 8501
 
 [theme]
 base = "light"
+
+[global]
+pythonVersion = "3.10"
