@@ -6,8 +6,8 @@ import joblib
 import sys
 import random
 
+st.code(f"🐍 Python version: {sys.version}")
 
-st.write("Python version:", sys.version)
 
 
 from huggingface_hub import hf_hub_download
