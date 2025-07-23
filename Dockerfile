@@ -14,6 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 ENV STREAMLIT_CONFIG_FILE=/home/user/app/src/.streamlit/config.toml
 
 # Run the Streamlit app
-CMD ["streamlit", "run", "src/streamlit_app.py", "--server.port=7860", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "streamlit_app.py", "--server.port=7860", "--server.address=0.0.0.0"]
+
 
 
