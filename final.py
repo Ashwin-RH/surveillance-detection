@@ -6,6 +6,10 @@ import joblib
 import sys
 import random
 
+
+st.write("Python version:", sys.version)
+
+
 from huggingface_hub import hf_hub_download
 
 # Disable oneDNN custom operations
